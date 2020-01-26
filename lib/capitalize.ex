@@ -3,6 +3,6 @@ defmodule Capitalize do
     string
     |> String.split(". ")
     |> Enum.map(&String.capitalize/1)
-    |> Enum.join(" .")
+    |> Enum.join(". ")
   end
 end
