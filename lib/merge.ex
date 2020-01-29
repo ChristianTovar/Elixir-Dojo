@@ -34,11 +34,13 @@ defmodule Merge do
     [right_head | merge(new_left, new_right)]
   end
 
-  defp merge(left, []) , do: [left]
-  defp merge([], right) , do: [right]
+  defp merge(left, []), do: [left]
+  defp merge([], right), do: [right]
 
-  defp merge(left, right) when left < right, do: [left, right]
-  defp merge(left, right) when left >= right, do: [right, left]
+  defp merge(left, [right]) when left < right, do: [left, right]
+  defp merge(left, [right]) when left >= right, do: [right, left]
+  defp merge([left], right) when left < right, do: [left, right]
+  defp merge([left], right) when left >= right, do: [right, left]
 
   def divide_list(list) do
     size =
