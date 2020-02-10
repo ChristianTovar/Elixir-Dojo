@@ -4,6 +4,6 @@ defmodule Tortoise do
     minutes = (hours - trunc(hours)) * 60
     seconds = (minutes - trunc(minutes)) * 60
     times = [hours, minutes, seconds]
-    for x <- times, do: trunc(x)
+    for value <- times, do: trunc(value)
   end
 end
