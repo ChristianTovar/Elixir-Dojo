@@ -17,7 +17,7 @@ defmodule MergeTest do
     assert Merge.sort([-34, -45, -1, -6, -100, -21]) === [-100, -45, -34, -21, -6, -1]
   end
 
-  test "mixed numbers" do
+  test "mixed integers" do
     assert Merge.sort([-69, 0, 40, -100, 2, 21, -45, 7, 3]) === [
              -100,
              -69,
